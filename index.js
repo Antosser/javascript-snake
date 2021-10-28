@@ -91,7 +91,7 @@ var interval = () => {
 		}
 	}
 	for (let i = 1; i < playerlength; i++)
-		if (equalArray(player[player.length - 1 - i], player[player.length - 1])) {
+		if (equalArray(player[player.length - 1 - i], player[player.length - 1]) || player[player.length - 1][0] < 0 || player[player.length - 1][1] < 0 || player[player.length - 1][0] >= size || player[player.length - 1][1] >= size) {
 			clearInterval(1);
 			console.log("Stop")
 		}
