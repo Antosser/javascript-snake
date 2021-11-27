@@ -47,7 +47,7 @@
 				break;
 		}
 
-		$("canvas").mousedown(e => {
+		$("canvas").on("touchstart", e => {
 			if (e.offsetX + e.offsetY < pixels) {
 				if (e.offsetX + pixels - e.offsetY < pixels) {
 					queue.push("left");
