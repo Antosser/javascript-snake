@@ -47,6 +47,25 @@
 				break;
 		}
 
+		$("canvas").mousedown(e => {
+			if (e.offsetX + e.offsetY < pixels) {
+				if (e.offsetX + pixels - e.offsetY < pixels) {
+					queue.push("left");
+				}
+				else {
+					queue.push("up");
+				}
+			}
+			else {
+				if (e.offsetX + pixels - e.offsetY < pixels) {
+					queue.push("down");
+				}
+				else {
+					queue.push("right");
+				}
+			}
+		});
+
 		started = true;
 		setInterval(interval, difficulty == 0 ? 1000/5 : difficulty == 1 ? 1000/10 : 1000/20);
 	});
@@ -95,6 +114,7 @@
 			if (equalArray(player[player.length - 1 - i], player[player.length - 1]) || player[player.length - 1][0] < 0 || player[player.length - 1][1] < 0 || player[player.length - 1][0] >= size || player[player.length - 1][1] >= size) {
 				clearInterval(1);
 				console.log("Stop")
+				
 			}
 	}
 })();
