@@ -1,2 +1,2 @@
-# [Snake](//htmlpreview.github.io/?//github.com/Antosser/javascript-snake/blob/master/index.html)
+# [Snake](//antosser.github.io/javascript-snake/)
 Snake
